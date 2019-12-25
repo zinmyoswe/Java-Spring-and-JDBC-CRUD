@@ -8,8 +8,12 @@ public class Contact {
 	private String phone;
 
 	public Contact(Integer id, String name, String email, String address, String phone) {
-		super();
+		this(name, email, address, phone);
 		this.id = id;
+	
+	}
+	
+	public Contact(String name, String email, String address, String phone) {
 		this.name = name;
 		this.email = email;
 		this.address = address;
@@ -55,5 +59,13 @@ public class Contact {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+	@Override
+	public String toString() {
+		return "Contact [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address + ", phone=" + phone
+				+ "]";
+	}
+	
+	
 
 }
